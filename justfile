@@ -5,6 +5,10 @@ set dotenv-load
 
 # Prepare .env
 bootstrap:
+  @echo -n "Enter new project name: "
+  @read name && sed -i "s/^name = \".*\"/name = \"$name\"/" pyproject.toml
+  @echo -n "Enter new description: "
+  @read description && sed -i "s/^description = \".*\"/description = \"$description\"/" pyproject.toml
   uv sync
   cp .env.example .env
   .venv/bin/python manage.py generate_secret_key
