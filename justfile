@@ -20,9 +20,9 @@ serve:
 
 # Dev
 dev:
-  npx concurrently --names "tailwind,django" -c '#f0db4f,#4B8BBE' "npx @tailwindcss/cli -i static/input.css -o static/tailwind.css -w" "python manage.py runserver"
+  npx concurrently --names "tailwind,django" -c '#f0db4f,#4B8BBE' "npx @tailwindcss/cli -i static/input.css -o static/css/style.css -w" "python manage.py runserver"
 
 # Build for production
 build:
-  npx @tailwindcss/cli -i static/input.css -o static/tailwind.css -m
+  npx @tailwindcss/cli -i static/input.css -o static/css/style.css -m
   python manage.py collectstatic --no-input
