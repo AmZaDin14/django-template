@@ -93,3 +93,6 @@ local_settings.py
 .env
 .idea/
 node_modules/
+static/css/style.css
+.ruff_cache
+Sesion.vim

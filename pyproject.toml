@@ -9,6 +9,11 @@ dependencies = [
     "django-browser-reload>=1.17.0",
     "django-htmx>=1.21.0",
     "django-stubs>=5.1.1",
+    "django-template-partials>=24.4",
     "environs[django]>=14.0.0",
     "whitenoise>=6.8.2",
 ]
+
+[tool.djlint]
+profile = "django"
+custom_blocks = "partialdef"

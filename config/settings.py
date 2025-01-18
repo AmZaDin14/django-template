@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django_htmx",
+    "template_partials",
     "django_browser_reload",
     "config",
 ]
@@ -68,6 +69,7 @@ TEMPLATES = [
         "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
+            "builtins": ["template_partials.templatetags.partials"],
             "context_processors": [
                 "django.template.context_processors.debug",
                 "django.template.context_processors.request",
